@@ -1,0 +1,141 @@
+@font-face {
+  font-family: "Girly";
+  src:
+    local("Girly"),
+    url(./static/girly.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  src:
+    local("Cormorant Garamond"),
+    url(./static/cormorant-regular.woff2) format("woff2");
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Cormorant Garamond";
+}
+main {
+  position: relative;
+  padding-inline: 1rem;
+  max-width: 999px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 2rem;
+}
+p {
+  font-size: 1.75rem;
+}
+h1,
+p {
+  color: #000;
+  margin-top: 0.75rem;
+}
+button {
+  font-size: 2.25rem;
+  font-family: "Cormorant Garamond";
+  transition: all 60ms ease-in-out;
+  border: none;
+  border-radius: 6px;
+  margin-block: 1.5rem;
+  padding-inline: 1.5rem;
+  padding-block: 0.5rem;
+  background-color: #f0508c;
+  color: #fff;
+}
+button:active {
+  scale: 0.9;
+}
+.try {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.her {
+  font-family: "Girly";
+  color: #ff3985;
+}
+.container {
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1.25rem;
+  padding-block: 1.5rem;
+  padding-inline: 2rem;
+}
+.modal {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  font-family: inherit;
+  left: 50%;
+  top: 50%;
+  padding-block: 0.5rem;
+  padding-inline: 1.25rem;
+  transform: translate(-50%, -50%);
+  max-width: 666px;
+  background-color: #fff;
+  border: 4px solid #e87d8f;
+  margin: auto;
+  span {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    width: 25ch;
+    img.spinner {
+      width: 150px;
+      animation: spin 1s linear infinite;
+    }
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.invisible {
+  display: none;
+}
+.pattern-header {
+  background-color: #d9d9f4;
+  opacity: 0.7;
+  background-image:
+    repeating-radial-gradient(circle at 0 0, transparent 0, #d9d9f4 40px),
+    repeating-linear-gradient(#ed72ef55, #ed72ef);
+}
+.pattern-body {
+  background-color: #d2cfef;
+  opacity: 1;
+  background-image:
+    repeating-radial-gradient(circle at 0 0, transparent 0, #d2cfef 100px),
+    repeating-linear-gradient(#7445f455, #7445f4);
+}
+.emoji {
+  /* background-image: url("/static/emoji.png"); */
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 32px;
+  width: 32px;
+}
+@media screen and (width < 360px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+  button {
+    font-size: 1.75rem;
+  }
+}

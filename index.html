@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Ask her out simulator! | Simulate asking her out without touching grass!
+    </title>
+    <link
+      rel="preconnect"
+      href="https://ask-her-out-simulator.vercel.app"
+      crossorigin
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <script defer src="./static/index.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="container pattern-header">
+        <h1>Ask <span class="her">her</span> out simulator!</h1>
+      </div>
+      <div class="container pattern-body">
+        <h2>So you've decided to <i>finally</i> ask her out!</h2>
+        <p>But obviously you need a little practice!</p>
+        <p>Worry not traveler, for you are at the right place!</p>
+        <p>This website simulates what she might say.</p>
+        <button class="btn">Ask Her Out</button>
+      </div>
+    </main>
+    <div class="container modal invisible">
+      <h2>She Says:</h2>
+      <span class="response-box"
+        ><img class="spinner" src="./static/loading.svg" alt="Loading..."
+      /></span>
+      <button class="btn try invisible">
+        <span style="display: inline; max-width: fit-content">Try Again </span>
+        <image src="/static/emoji.png" class="emoji" />
+      </button>
+    </div>
+  </body>
+</html>
